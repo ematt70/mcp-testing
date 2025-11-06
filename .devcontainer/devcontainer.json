@@ -1,0 +1,28 @@
+{
+    "name": "Python 3",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+
+    "mounts": [
+        {
+            "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
+            "target": "/home/vscode/.ssh",
+            "type": "bind"
+        }
+    ],
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "donjayamanne.python-extension-pack",
+                "ms-python.vscode-pylance",
+                "ms-python.debugpy",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
+            ],
+            "remoteUser": "vscode"
+        }
+    }
+}
