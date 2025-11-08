@@ -108,7 +108,7 @@ class MCPClient:
 
                 # Get next response from Claude
                 response = self.anthropic.messages.create(
-                    model="",
+                    model="claude-sonnet-4-20250514",
                     max_tokens=1000,
                     messages=messages,
                     tools=available_tools
